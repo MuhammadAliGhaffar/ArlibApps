@@ -1,0 +1,304 @@
+{
+  "medicines": [
+    {
+      "name": "Healitol-500",
+      "disease_cure": "Migraine",
+      "benefits": "Relieves intense migraines and promotes headache relief.",
+      "dosage_mg": 500
+    },
+    {
+      "name": "Reliefex-200",
+      "disease_cure": "Aches",
+      "benefits": "Alleviates various aches and pains throughout the body.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "Tranquilify-RX",
+      "disease_cure": "Stress",
+      "benefits": "Reduces stress levels and promotes a sense of calmness.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "Energimax",
+      "disease_cure": "Fatigue",
+      "benefits": "Boosts energy and fights against feelings of tiredness.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "Revitalyte-C",
+      "disease_cure": "Common Cold",
+      "benefits": "Strengthens the immune system to combat cold symptoms.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "SleepSure",
+      "disease_cure": "Insomnia",
+      "benefits": "Induces restful sleep and supports a healthy sleep cycle.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "AllerGuardian",
+      "disease_cure": "Allergies",
+      "benefits": "Provides relief from allergy symptoms and protects against allergens.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "Glowify-Z",
+      "disease_cure": "Acne",
+      "benefits": "Clears up acne and promotes a radiant complexion.",
+      "dosage_mg": 120
+    },
+    {
+      "name": "FlexiJoint-Forte",
+      "disease_cure": "Joint Pain",
+      "benefits": "Supports joint health and reduces pain and stiffness.",
+      "dosage_mg": 400
+    },
+    {
+      "name": "CardioCalm",
+      "disease_cure": "Heart Issues",
+      "benefits": "Maintains cardiovascular health and supports a steady heartbeat.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "ImmunoShield",
+      "disease_cure": "Viral Infections",
+      "benefits": "Boosts the immune system to fend off viral infections.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "DigestiEase",
+      "disease_cure": "Digestive Issues",
+      "benefits": "Aids digestion and alleviates common digestive problems.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "SightSaver-1000",
+      "disease_cure": "Vision Problems",
+      "benefits": "Enhances vision and supports eye health.",
+      "dosage_mg": 1000
+    },
+    {
+      "name": "SugarSurge",
+      "disease_cure": "Diabetes",
+      "benefits": "Regulates blood sugar levels and supports diabetes management.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "BoneBlast",
+      "disease_cure": "Osteoporosis",
+      "benefits": "Strengthens bones and promotes bone density.",
+      "dosage_mg": 500
+    },
+    {
+      "name": "Serenezyme",
+      "disease_cure": "Anxiety",
+      "benefits": "Reduces anxiety levels and promotes a calm mental state.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "BreathBreeze",
+      "disease_cure": "Halitosis",
+      "benefits": "Freshens breath and eliminates bad breath.",
+      "dosage_mg": 120
+    },
+    {
+      "name": "MuscleMarvel",
+      "disease_cure": "Muscle Cramps",
+      "benefits": "Relieves muscle cramps and promotes muscle relaxation.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "LibidoLift",
+      "disease_cure": "Low Libido",
+      "benefits": "Enhances libido and supports sexual wellness.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "BladderBurst",
+      "disease_cure": "Incontinence",
+      "benefits": "Strengthens the bladder and supports urinary control.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "MeloMint",
+      "disease_cure": "Mood Swings",
+      "benefits": "Stabilizes mood and promotes emotional well-being.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "ThermoTrim",
+      "disease_cure": "Weight Management",
+      "benefits": "Supports weight loss and boosts metabolism.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "BrainBoost-XL",
+      "disease_cure": "Cognitive Decline",
+      "benefits": "Enhances cognitive function and supports mental clarity.",
+      "dosage_mg": 400
+    },
+    {
+      "name": "HairHaven",
+      "disease_cure": "Baldness",
+      "benefits": "Promotes hair growth and prevents baldness.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "Dermacure-SPF50",
+      "disease_cure": "Sunburn",
+      "benefits": "Soothes sunburned skin and provides SPF protection.",
+      "dosage_mg": 50
+    },
+    {
+      "name": "PuffPurge",
+      "disease_cure": "Smoking Addiction",
+      "benefits": "Aids in smoking cessation and reduces cravings.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "RespiRestore",
+      "disease_cure": "Respiratory Issues",
+      "benefits": "Clears respiratory passages and supports lung health.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "PlaquePunch",
+      "disease_cure": "Dental Issues",
+      "benefits": "Prevents plaque buildup and supports oral health.",
+      "dosage_mg": 120
+    },
+    {
+      "name": "ChillChewables",
+      "disease_cure": "Anger Management",
+      "benefits": "Calms anger and promotes emotional balance.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "ZitZapper",
+      "disease_cure": "Acne",
+      "benefits": "Targets and eliminates acne for a clearer complexion.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "FlexiFocus",
+      "disease_cure": "ADHD",
+      "benefits": "Improves focus and attention in individuals with ADHD.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "DigestiDelight",
+      "disease_cure": "Digestive Issues",
+      "benefits": "Soothes digestive discomfort and supports gut health.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "SleepSiesta",
+      "disease_cure": "Sleep Disorders",
+      "benefits": "Induces a restful sleep and regulates sleep patterns.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "CardioCleanse",
+      "disease_cure": "High Cholesterol",
+      "benefits": "Supports cardiovascular health and lowers cholesterol.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "NerveNectar",
+      "disease_cure": "Chronic Pain",
+      "benefits": "Alleviates chronic pain and supports nerve health.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "CalmCraze",
+      "disease_cure": "Depression",
+      "benefits": "Eases symptoms of depression and promotes a positive mood.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "SnoreSilence",
+      "disease_cure": "Snoring",
+      "benefits": "Reduces snoring and promotes a peaceful night's sleep.",
+      "dosage_mg": 120
+    },
+    {
+      "name": "HydrateHero",
+      "disease_cure": "Dehydration",
+      "benefits": "Restores hydration levels and supports overall well-being.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "HappyHeart",
+      "disease_cure": "Heartbreak",
+      "benefits": "Mends emotional wounds and promotes a happy heart.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "PMS-Relief",
+      "disease_cure": "Premenstrual Syndrome",
+      "benefits": "Alleviates symptoms of PMS and promotes emotional balance.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "SugarStopper",
+      "disease_cure": "Sugar Addiction",
+      "benefits": "Reduces cravings for sugary foods and supports a healthy diet.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "SquintShield",
+      "disease_cure": "Eye Strain",
+      "benefits": "Relieves eye strain and supports visual comfort.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "HeadacheHalt",
+      "disease_cure": "Headaches",
+      "benefits": "Halts headaches and provides fast relief.",
+      "dosage_mg": 250
+    },
+    {
+      "name": "FungiFighter",
+      "disease_cure": "Fungal Infections",
+      "benefits": "Fights fungal infections and promotes skin health.",
+      "dosage_mg": 120
+    },
+    {
+      "name": "BloodBoost",
+      "disease_cure": "Anemia",
+      "benefits": "Boosts red blood cell production and supports healthy blood levels.",
+      "dosage_mg": 180
+    },
+    {
+      "name": "DetoxDazzle",
+      "disease_cure": "Toxin Buildup",
+      "benefits": "Detoxifies the body and promotes overall well-being.",
+      "dosage_mg": 300
+    },
+    {
+      "name": "ScarSmoother",
+      "disease_cure": "Scars",
+      "benefits": "Smoothens scars and promotes skin regeneration.",
+      "dosage_mg": 150
+    },
+    {
+      "name": "FocusFix",
+      "disease_cure": "Lack of Focus",
+      "benefits": "Enhances focus and concentration.",
+      "dosage_mg": 100
+    },
+    {
+      "name": "SkinSoother",
+      "disease_cure": "Eczema",
+      "benefits": "Soothes eczema symptoms and supports skin health.",
+      "dosage_mg": 200
+    },
+    {
+      "name": "SniffleStop",
+      "disease_cure": "Common Cold",
+      "benefits": "Reduces symptoms of the common cold and promotes a quick recovery.",
+      "dosage_mg": 250
+    }
+  ]
+}

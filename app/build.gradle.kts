@@ -94,7 +94,7 @@ dependencies {
     // When using Kotlin.
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     //Room
-    implementation("androidx.room:room-runtime:2.4.0")
-    kapt("androidx.room:room-compiler:2.4.0")
-    implementation("androidx.room:room-ktx:2.4.0")
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 }
