@@ -17,7 +17,7 @@ import com.example.arlibapps.utilities.REGISTRATION_SCREEN
 fun NavigationHost() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = LOGIN_SCREEN) {
+    NavHost(navController = navController, startDestination = DASHBOARD_SCREEN) {
         composable(route = LOGIN_SCREEN) {
             LoginScreen(navController = navController)
         }

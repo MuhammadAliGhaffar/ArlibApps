@@ -1,6 +1,5 @@
-package com.example.arlibapps.data.model
+package com.example.arlibapps.utilities
 
-import com.example.arlibapps.utilities.NetworkResult
 import retrofit2.Response
 
 abstract class BaseApiResponse {

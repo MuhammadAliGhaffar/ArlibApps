@@ -9,8 +9,8 @@ import com.example.arlibapps.data.model.Medicine
 @Dao
 interface MedicinesDao {
     @Query("SELECT * FROM tbl_medicines")
-    suspend fun getAll(): Medicine
+    suspend fun getAll(): List<Medicine>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(medicine: Medicine)
+    suspend fun insert(medicine: List<Medicine>)
 }

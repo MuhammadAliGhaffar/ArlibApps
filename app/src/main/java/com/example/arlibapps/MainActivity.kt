@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Preview(showBackground = true, widthDp = 360, heightDp = 800)
+    @Preview(showBackground = true, device = "id:pixel_5", showSystemUi = true)
     @Composable
     fun AppView() {
         NavigationHost()

@@ -2,13 +2,12 @@ package com.example.arlibapps.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class Medicines(
     @SerializedName("medicines")
-    val medicines: List<Medicine>
+    val medicines: List<Medicine> = arrayListOf()
 )
 
 @Entity(tableName = "tbl_medicines")
