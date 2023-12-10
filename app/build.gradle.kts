@@ -89,6 +89,8 @@ dependencies {
     //Coroutine + Flow
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    //ConstraintLayout
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     //Hilt
     implementation("com.google.dagger:hilt-android:2.46.1")
     kapt("com.google.dagger:hilt-compiler:2.46.1")
