@@ -19,12 +19,12 @@ class DashboardViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(DashboardUiState())
     val uiState: StateFlow<DashboardUiState> = _uiState.asStateFlow()
 
-    init {
-        getMedicines()
-    }
+//    init {
+//        getMedicines()
+//    }
 
-    private fun getMedicines() {
-        _uiState.value.medicines = runBlocking {
+    fun getMedicines():List<Medicine> {
+        return runBlocking {
             val deferred = async {
                 repository.getMedicines()
             }

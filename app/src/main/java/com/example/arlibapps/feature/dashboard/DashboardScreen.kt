@@ -26,14 +26,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
@@ -54,32 +51,28 @@ fun DashboardScreen(
     navController: NavController,
     dashboardViewModel: DashboardViewModel = hiltViewModel()
 ) {
-
-    val uiState = dashboardViewModel.uiState.collectAsState()
+    val medicines = remember { dashboardViewModel.getMedicines() }
 
     ConstraintLayout(
         modifier = Modifier
             .fillMaxSize()
     ) {
         val (firstContainer, secondContainer) = createRefs()
-        Column(
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp)
-                .constrainAs(firstContainer) {
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    top.linkTo(parent.top)
-                }
-        ) {
-            TopContainer()
-        }
+
+        DateContainer(modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .constrainAs(firstContainer) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                top.linkTo(parent.top)
+            })
+
         ListContainer(modifier = Modifier.constrainAs(secondContainer) {
             start.linkTo(parent.start)
             end.linkTo(parent.end)
             top.linkTo(firstContainer.bottom)
-        }, medicines = uiState.value.medicines, navController = navController)
+        }, medicines = medicines, navController = navController)
     }
 }
 
@@ -102,37 +95,41 @@ fun ListContainer(modifier: Modifier, medicines: List<Medicine>, navController: 
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun TopContainer() {
+fun DateContainer(modifier: Modifier) {
     val calendarUtils = CalendarUtils()
     var data by remember { mutableStateOf(calendarUtils.getData(lastSelectedDate = calendarUtils.today)) }
-
-    Header(
-        data = data,
-        onPrevClickListener = { startDate ->
-            val finalStartDate = startDate.minusDays(1)
-            data = calendarUtils.getData(
-                startDate = finalStartDate,
-                lastSelectedDate = data.selectedDate.date
-            )
-        },
-        onNextClickListener = { endDate ->
-            val finalStartDate = endDate.plusDays(2)
-            data = calendarUtils.getData(
-                startDate = finalStartDate,
-                lastSelectedDate = data.selectedDate.date
-            )
-        }
-    )
-    Content(data = data) { date ->
-        data = data.copy(
-            selectedDate = date,
-            visibleDates = data.visibleDates.map {
-                it.copy(
-                    isSelected = it.date.isEqual(date.date)
+    Column(
+        modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Header(
+            data = data,
+            onPrevClickListener = { startDate ->
+                val finalStartDate = startDate.minusDays(1)
+                data = calendarUtils.getData(
+                    startDate = finalStartDate,
+                    lastSelectedDate = data.selectedDate.date
+                )
+            },
+            onNextClickListener = { endDate ->
+                val finalStartDate = endDate.plusDays(2)
+                data = calendarUtils.getData(
+                    startDate = finalStartDate,
+                    lastSelectedDate = data.selectedDate.date
                 )
             }
         )
+        Content(data = data) { date ->
+            data = data.copy(
+                selectedDate = date,
+                visibleDates = data.visibleDates.map {
+                    it.copy(
+                        isSelected = it.date.isEqual(date.date)
+                    )
+                }
+            )
+        }
     }
+
 }
 
 @RequiresApi(Build.VERSION_CODES.O)
