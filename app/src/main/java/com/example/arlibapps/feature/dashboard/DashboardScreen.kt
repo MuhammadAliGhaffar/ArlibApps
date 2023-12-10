@@ -53,33 +53,17 @@ fun DashboardScreen(
 ) {
     val medicines = remember { dashboardViewModel.getMedicines() }
 
-    ConstraintLayout(
-        modifier = Modifier
-            .fillMaxSize()
+    Column(
+        modifier = Modifier.fillMaxWidth(),
     ) {
-        val (firstContainer, secondContainer) = createRefs()
-
-        DateContainer(modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-            .constrainAs(firstContainer) {
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                top.linkTo(parent.top)
-            })
-
-        ListContainer(modifier = Modifier.constrainAs(secondContainer) {
-            start.linkTo(parent.start)
-            end.linkTo(parent.end)
-            top.linkTo(firstContainer.bottom)
-        }, medicines = medicines, navController = navController)
+        DateContainer()
+        ListContainer(medicines = medicines, navController = navController)
     }
 }
 
 @Composable
-fun ListContainer(modifier: Modifier, medicines: List<Medicine>, navController: NavController) {
+fun ListContainer(medicines: List<Medicine>, navController: NavController) {
     LazyColumn(
-        modifier,
         contentPadding = PaddingValues(horizontal = 15.dp, vertical = 8.dp),
         content = {
             items(medicines) { medicine ->
@@ -95,11 +79,11 @@ fun ListContainer(modifier: Modifier, medicines: List<Medicine>, navController: 
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun DateContainer(modifier: Modifier) {
+fun DateContainer() {
     val calendarUtils = CalendarUtils()
     var data by remember { mutableStateOf(calendarUtils.getData(lastSelectedDate = calendarUtils.today)) }
     Column(
-        modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = Modifier.padding(15.dp), verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Header(
             data = data,
