@@ -2,8 +2,11 @@ package com.example.arlibapps.data.model
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.util.Calendar
+import java.util.Locale
 
 data class CalendarUiModel(
     val selectedDate: Date, // the date selected by the User. by default is Today.
@@ -20,5 +23,11 @@ data class CalendarUiModel(
     ) {
         @RequiresApi(Build.VERSION_CODES.O)
         val day: String = date.format(DateTimeFormatter.ofPattern("E")) // get the day by formatting the date
+    }
+
+    fun getCurrentTimeWithAmPm(): String {
+        val calendar = Calendar.getInstance()
+        val simpleDateFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+        return simpleDateFormat.format(calendar.time)
     }
 }

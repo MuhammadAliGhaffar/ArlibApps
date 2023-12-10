@@ -1,13 +1,11 @@
 package com.example.arlibapps.feature.dashboard
 
-import android.os.Build
-import androidx.annotation.RequiresApi
+import android.annotation.SuppressLint
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -32,20 +30,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.arlibapps.data.model.CalendarUiModel
 import com.example.arlibapps.data.model.Medicine
 import com.example.arlibapps.ui.composables.MedicineListItem
 import com.example.arlibapps.utilities.CalendarUtils
-import com.example.arlibapps.utilities.toast
+import com.example.arlibapps.utilities.MEDICINE_SCREEN
+import com.google.gson.Gson
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
-@RequiresApi(Build.VERSION_CODES.O)
+@SuppressLint("NewApi")
 @Composable
 fun DashboardScreen(
     navController: NavController,
@@ -71,13 +70,14 @@ fun ListContainer(medicines: List<Medicine>, navController: NavController) {
                     medicine = medicine
                 )
                 {
-                    toast(navController.context, it.name)
+                    val serializationMedicine = Gson().toJson(medicine)
+                    navController.navigate("$MEDICINE_SCREEN/${serializationMedicine}")
                 }
             }
         })
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
+@SuppressLint("NewApi")
 @Composable
 fun DateContainer() {
     val calendarUtils = CalendarUtils()
@@ -85,6 +85,14 @@ fun DateContainer() {
     Column(
         modifier = Modifier.padding(15.dp), verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
+        //nav arg pass
+
+        val name = "Ali Name Login Form se lena ha"
+        Text(
+            text = "Welcome $name",
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold
+        )
         Header(
             data = data,
             onPrevClickListener = { startDate ->
@@ -116,7 +124,7 @@ fun DateContainer() {
 
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
+@SuppressLint("NewApi")
 @Composable
 fun Header(
     data: CalendarUiModel,
@@ -126,7 +134,7 @@ fun Header(
     Row {
         Text(
             text = if (data.selectedDate.isToday) {
-                "Today ${
+                "${data.getCurrentTimeWithAmPm()} ${
                     data.selectedDate.date.format(
                         DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)
                     )
@@ -159,7 +167,7 @@ fun Header(
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
+@SuppressLint("NewApi")
 @Composable
 fun Content(
     data: CalendarUiModel,
@@ -175,7 +183,7 @@ fun Content(
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
+@SuppressLint("NewApi")
 @Composable
 fun ContentItem(
     date: CalendarUiModel.Date,
