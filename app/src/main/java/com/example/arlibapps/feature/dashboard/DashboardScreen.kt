@@ -87,7 +87,7 @@ fun DateContainer() {
     ) {
         //nav arg pass
 
-        val name = "Ali Name Login Form se lena ha"
+        val name = "Ali"
         Text(
             text = "Welcome $name",
             style = MaterialTheme.typography.headlineMedium,
