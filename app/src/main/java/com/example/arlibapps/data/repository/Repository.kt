@@ -23,10 +23,10 @@ class Repository @Inject constructor(
 ) : BaseApiResponse() {
 
     suspend fun getMedicines(): List<Medicine> {
-        return if (internetIsConnected()) {
-            fetchMedicinesFromNetwork()
-        } else {
-            fetchMedicinesFromLocal()
+        return when {
+            fetchMedicinesFromLocal().isNotEmpty() -> fetchMedicinesFromLocal()
+            internetIsConnected() -> fetchMedicinesFromNetwork()
+            else -> fetchMedicinesFromLocal()
         }
     }
 

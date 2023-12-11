@@ -48,14 +48,16 @@ import java.time.format.FormatStyle
 @Composable
 fun DashboardScreen(
     navController: NavController,
-    dashboardViewModel: DashboardViewModel = hiltViewModel()
+    dashboardViewModel: DashboardViewModel = hiltViewModel(),
+    username: String?,
+    email: String?
 ) {
     val medicines = remember { dashboardViewModel.getMedicines() }
 
     Column(
         modifier = Modifier.fillMaxWidth(),
     ) {
-        DateContainer()
+        DateContainer(username = username, email = email)
         ListContainer(medicines = medicines, navController = navController)
     }
 }
@@ -79,19 +81,20 @@ fun ListContainer(medicines: List<Medicine>, navController: NavController) {
 
 @SuppressLint("NewApi")
 @Composable
-fun DateContainer() {
+fun DateContainer(username: String?, email: String?) {
     val calendarUtils = CalendarUtils()
     var data by remember { mutableStateOf(calendarUtils.getData(lastSelectedDate = calendarUtils.today)) }
     Column(
         modifier = Modifier.padding(15.dp), verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        //nav arg pass
-
-        val name = "Ali"
         Text(
-            text = "Welcome $name",
+            text = "Welcome $username",
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Email : $email",
+            style = MaterialTheme.typography.titleSmall
         )
         Header(
             data = data,
