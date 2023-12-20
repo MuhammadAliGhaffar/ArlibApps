@@ -12,7 +12,7 @@
 - **Navigation:** Navigation components have been integrated to facilitate seamless navigation between different screens within the app, following best practices for a single-activity, multiple-fragment architecture.
 
 ## App Preview
-https://github.com/MuhammadAliGhaffar/ArlibApps/assets/55552043/f569f253-aeb4-497b-a875-2410ab484678
+https://github.com/MuhammadAliGhaffar/MedicineApp/assets/55552043/f569f253-aeb4-497b-a875-2410ab484678
 
 ## Screenshots
 <p align="center"> <img src="resources/ss1.png" width="250"/>  <img src="resources/ss2.png" width="250"/>  <img src="resources/ss3.png" width="250" /></p>

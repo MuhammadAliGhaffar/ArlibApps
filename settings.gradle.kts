@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ArlibApps"
+rootProject.name = "MedicineApp"
 include(":app")
  

@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.arlibapps"
+    namespace = "com.muhammadalighaffar.medicineapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.arlibapps"
+        applicationId = "com.muhammadalighaffar.medicineapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
