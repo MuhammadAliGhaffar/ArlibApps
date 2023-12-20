@@ -1,4 +1,4 @@
-<h1 align="center">Arlib Apps</h1>
+<h1 align="center">Medicine App</h1>
 
 ## Features
 
