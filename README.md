@@ -2,7 +2,7 @@
 
 ## Features
 
-- **Data Retrieval:** I have successfully implemented data retrieval by fetching exchange rate data from the [Mocky.io](https://run.mocky.io/v3/e5423b88-1a23-44e4-a692-9618ab87e802) using Retrofit2.
+- **Data Retrieval:** I have successfully implemented data retrieval by fetching data from the [Mocky.io](https://run.mocky.io/v3/e5423b88-1a23-44e4-a692-9618ab87e802) using Retrofit2.
 - **Architecture:** I've used the MVVM (Model-View-ViewModel) clean architecture. Additionally, a ViewModel is employed to handle user interface-related data.
 - **Dependency Injection:** Hilt Dagger has been employed for dependency injection, ensuring that the code remains modular and maintainable.
 - **Offline Caching:** The app features offline caching to enhance user experience by providing access to previously fetched medicine data even when the user is offline.
